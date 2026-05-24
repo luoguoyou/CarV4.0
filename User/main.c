@@ -224,36 +224,7 @@ void TIM3_IRQHandler(void)
             }
                     break;
 
-            case Cross_road:// 十字路口判断逻辑
-                car_state = Turn_right;
-                // if (initial_turn_cmd == CMD_LEFT) //&& turn_counter < turn_max) 
-                // {
-                //     car_state = Turn_left;//跳到左转
-                // } 
-                // else if (initial_turn_cmd == CMD_RIGHT ) 
-                // {
-                //     car_state = Turn_right;// 跳到右转
-                // }
-                // else
-                // {
-                //    car_state = Tracking;// 跳到循迹逻辑
-                //     // car_state = Stop_car;
-                // }
-                break;
-
-            case T_road:// T路口
-                // if(T_flag==0)
-                // {
-                //     T_flag = 1;
-                    car_state = Rough_road;
-                    //car_state = Tracking;//先关闭Rough_road逻辑，直接进入循迹
-                // }
-                // else
-                // {
-                //     car_state = Tracking;
-                //     T_flag = 0;// 恢复T_flag，以便下次进入T字路口时能正确切换状态
-                // }
-                break;
+         
                 case Rough_road://粗糙路面
                 if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_4) 
                 & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_0) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1)) // pb3 pb4 pb0 pb1同时为1则判断路口
@@ -342,51 +313,6 @@ void TIM3_IRQHandler(void)
                     break;
                 }
                   break;
-
-            case Off_line://脱线转圈
-                    if(pos < 0)//说明向左偏离了
-                    {
-                        if(val !=0x00)
-                        {
-                            white_counter = 0;// 重置连续白底计数器
-                            car_state = Tracking;// 跳到循迹逻辑
-                        }
-                        else//向靠近线方向转，即向右转
-                        {
-                            /*不行差速调整*/
-                            int offset = (int)(pos * PROPORTIONAL_COEFF);
-                            int L_Speed = BASE_SPEED + offset;
-                            int R_Speed = BASE_SPEED - offset;
-                            if(L_Speed > MAX_SPEED) L_Speed = MAX_SPEED;
-                            if(L_Speed < -MAX_SPEED) L_Speed = -MAX_SPEED;
-                            if(R_Speed > MAX_SPEED) R_Speed = MAX_SPEED;
-                            if(R_Speed < -MAX_SPEED) R_Speed = -MAX_SPEED;
-                            Motor_Left_SetSpeed(BASE_SPEED + offset);
-                            Motor_Right_SetSpeed(BASE_SPEED - offset);
-                        }
-                    }
-                    else// pos > 0//说明向右偏离了
-                    {
-                        if(val !=0x00)
-                        {
-                            white_counter = 0;// 重置连续白底计数器
-                            car_state = Tracking;// 跳到循迹逻辑
-                        }
-                        else//向靠近线方向转，即向左转
-                        {
-                            /*不行差速调整*/  
-                            int offset = (int)(pos * PROPORTIONAL_COEFF);
-                            int L_Speed = BASE_SPEED + offset;
-                            int R_Speed = BASE_SPEED - offset;
-                            if(L_Speed > MAX_SPEED) L_Speed = MAX_SPEED;
-                            if(L_Speed < -MAX_SPEED) L_Speed = -MAX_SPEED;
-                            if(R_Speed > MAX_SPEED) R_Speed = MAX_SPEED;
-                            if(R_Speed < -MAX_SPEED) R_Speed = -MAX_SPEED;
-													Motor_Left_SetSpeed(BASE_SPEED - offset);
-                            Motor_Right_SetSpeed(BASE_SPEED + offset);
-                        }  
-                     }
-                     break;
 
                     case Stop_car://停车
                         Stop_All_Motors();
