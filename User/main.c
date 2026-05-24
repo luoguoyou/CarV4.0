@@ -149,37 +149,8 @@ void TIM3_IRQHandler(void)
                 break;
 
             case Tracking:// 循迹逻辑
-                turn_init_flag = 0; // 【重要修复】每次回到循迹状态，必须重置转向初始化标志，否则下次转向无效
-                if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_4) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_0) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1)) // pb3 pb4 pb0 pb1同时为1(灯灭)则判断路口 
-                {
-                    car_state = Crossing; // 跳转路口判断
-                    cross_delay_cnt = 100; // 设置路口延时计数器，确保有足够时间稳定检测路口特征
-                    break;
-                }
-                /*感觉这个不太行，普通循迹就可以调整
-                else if(white_counter >= LOST_LINE_LIMIT)//丢线判断
-                {
-                    white_counter = LOST_LINE_LIMIT;// 防止计数器溢出
-                    car_state = Off_line; // 跳转脱线逻辑
-                }*/
-                /*直角转弯判断，感觉不太行，先关闭，后面再调试
-                else if((GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_0)& GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) )&&(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3==0) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_4)==0  ))
-                {
-                    car_state = Turn_right;// 跳转右转逻辑
-                }
-                else if((GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_0)==0  & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1)==0 )&&(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3) & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_4)  ))
-                {
-                    car_state = Turn_left;// 跳转左转逻辑
-                }
-                /*
-                //环岛判断加这里
-                if( )
-                {
-                    car_state = Island;// 跳转环岛逻辑
-                }
-                */        
-                else// 正常循迹(包括虚线)
-                {
+
+
                     // 虚线段 pos 可能波动大，使用稍小的系数或滤波
                     int offset = (int)(pos * PROPORTIONAL_COEFF);
                     int L_Speed = BASE_SPEED + offset;
@@ -192,7 +163,7 @@ void TIM3_IRQHandler(void)
                     // 设置电机速度
                     Motor_Left_SetSpeed(L_Speed);
                     Motor_Right_SetSpeed(R_Speed);
-                }
+                
                 break;
             case Crossing: // 路口判断逻辑
                 Stop_All_Motors();
@@ -206,11 +177,11 @@ void TIM3_IRQHandler(void)
                 if((GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_12)|GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5)|GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)|GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_7))&&
 				(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_3)==0 & GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1)==0 ))//+字路口特征
                 {
-                    car_state = Cross_road;// 跳到十字路口
+                  
                 }
                 else if(val == 0x00)//T字路口特征
                 {
-                    car_state = T_road;// 跳到T字路口
+
                 }
                 else if(val == 0xff)//坡道特征
                 {
