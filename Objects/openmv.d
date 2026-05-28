@@ -2,7 +2,7 @@
 .\objects\openmv.o: Hardware\OpenMv.h
 .\objects\openmv.o: .\Start\stm32f10x.h
 .\objects\openmv.o: .\Start\core_cm3.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\openmv.o: .\Start\system_stm32f10x.h
 .\objects\openmv.o: .\User\stm32f10x_conf.h
 .\objects\openmv.o: .\Library\stm32f10x_adc.h
@@ -31,11 +31,11 @@
 .\objects\openmv.o: .\Library\misc.h
 .\objects\openmv.o: .\System\sys.h
 .\objects\openmv.o: .\User\stm32f10x_it.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\openmv.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\string.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\math.h
+.\objects\openmv.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\openmv.o: Hardware\Motor.h
 .\objects\openmv.o: Hardware\usart.h

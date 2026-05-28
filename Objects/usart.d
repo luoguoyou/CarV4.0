@@ -2,7 +2,7 @@
 .\objects\usart.o: Hardware\usart.h
 .\objects\usart.o: .\Start\stm32f10x.h
 .\objects\usart.o: .\Start\core_cm3.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart.o: .\Start\system_stm32f10x.h
 .\objects\usart.o: .\User\stm32f10x_conf.h
 .\objects\usart.o: .\Library\stm32f10x_adc.h
@@ -29,12 +29,12 @@
 .\objects\usart.o: .\Library\stm32f10x_usart.h
 .\objects\usart.o: .\Library\stm32f10x_wwdg.h
 .\objects\usart.o: .\Library\misc.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\usart.o: .\System\sys.h
 .\objects\usart.o: .\User\stm32f10x_it.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\usart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\string.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\math.h
+.\objects\usart.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\usart.o: Hardware\jy61p.h

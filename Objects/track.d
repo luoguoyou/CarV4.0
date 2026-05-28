@@ -2,7 +2,7 @@
 .\objects\track.o: Hardware\track.h
 .\objects\track.o: .\Start\stm32f10x.h
 .\objects\track.o: .\Start\core_cm3.h
-.\objects\track.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\track.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\track.o: .\Start\system_stm32f10x.h
 .\objects\track.o: .\User\stm32f10x_conf.h
 .\objects\track.o: .\Library\stm32f10x_adc.h

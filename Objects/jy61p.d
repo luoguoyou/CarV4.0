@@ -2,7 +2,7 @@
 .\objects\jy61p.o: Hardware\jy61p.h
 .\objects\jy61p.o: .\Start\stm32f10x.h
 .\objects\jy61p.o: .\Start\core_cm3.h
-.\objects\jy61p.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\jy61p.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\jy61p.o: .\Start\system_stm32f10x.h
 .\objects\jy61p.o: .\User\stm32f10x_conf.h
 .\objects\jy61p.o: .\Library\stm32f10x_adc.h

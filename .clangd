@@ -1,18 +1,30 @@
 CompileFlags:
   Add:
-    - -I"D:\Keil ARM\ARM\ARMCLANG\bin\armar.exe\include"
     - -IC:\Users\21455\.eide\tools\gcc_arm\arm-none-eabi\include\c++\14.3.1
     - -IC:\Users\21455\.eide\tools\gcc_arm\arm-none-eabi\include\c++\14.3.1\arm-none-eabi\thumb\v7-m\nofp
     - -IC:\Users\21455\.eide\tools\gcc_arm\arm-none-eabi\include\c++\14.3.1\backward
     - -IC:\Users\21455\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\14.3.1\include
     - -IC:\Users\21455\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\14.3.1\include-fixed
     - -IC:\Users\21455\.eide\tools\gcc_arm\arm-none-eabi\include
-    - -I"null\include"
-    - -I"D:\Keil ARM\ARM\ARMCLANG\include"
-    - -I"D:\Keil ARM\ARM\ARMCLANG\include\arm_linux"
-    - -I"D:\Keil ARM\ARM\ARMCLANG\include\arm_linux_compat"
-    - -I"D:\Keil ARM\ARM\ARMCLANG\include\libcxx"
-  Remove: []
+    - -isystemD:\Keil ARM\ARM\ARMCLANG\include
+    - -isystemD:\Keil ARM\ARM\ARMCLANG\include\libcxx
+    - -ferror-limit=0
+  Remove:
+    - --cpu
+    - --li
+    - --c99
+    - --split_sections
+    - --diag_suppress=*
+    - --no_depend_system_headers
+    - --depend
+    - --strict
+    - --enum_is_int
+    - --gnu
+    - --apcs=*
+    - --signed_chars
+    - --split_ldm
+    - --execute_only
+    - -Otime
   CompilationDatabase: ./build/Target 1
   Compiler: C:\Users\21455\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe
 Diagnostics:

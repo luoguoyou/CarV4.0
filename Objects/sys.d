@@ -2,7 +2,7 @@
 .\objects\sys.o: System\sys.h
 .\objects\sys.o: .\Start\stm32f10x.h
 .\objects\sys.o: .\Start\core_cm3.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sys.o: .\Start\system_stm32f10x.h
 .\objects\sys.o: .\User\stm32f10x_conf.h
 .\objects\sys.o: .\Library\stm32f10x_adc.h
@@ -30,9 +30,9 @@
 .\objects\sys.o: .\Library\stm32f10x_wwdg.h
 .\objects\sys.o: .\Library\misc.h
 .\objects\sys.o: .\User\stm32f10x_it.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\sys.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\math.h
+.\objects\sys.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdlib.h

@@ -1,7 +1,7 @@
 .\objects\main.o: User\main.c
 .\objects\main.o: .\Start\stm32f10x.h
 .\objects\main.o: .\Start\core_cm3.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Start\system_stm32f10x.h
 .\objects\main.o: .\User\stm32f10x_conf.h
 .\objects\main.o: .\Library\stm32f10x_adc.h
@@ -35,14 +35,14 @@
 .\objects\main.o: .\Hardware\Motor.h
 .\objects\main.o: .\Hardware\Key.h
 .\objects\main.o: .\Hardware\usart.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\System\sys.h
 .\objects\main.o: .\User\stm32f10x_it.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\main.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: D:\Keil ARM\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\main.o: .\Hardware\Encoder.h
 .\objects\main.o: .\Hardware\track.h
 .\objects\main.o: .\Hardware\Timer.h
